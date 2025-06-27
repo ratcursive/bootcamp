@@ -71,48 +71,6 @@ public class Algorithms
 		}
 	}
 	
-	public static boolean checkBrackets(String checkThis)
-	{
-		int brackA = 0;
-		int brackB = 0;
-		int brackC = 0;
-		int brackD = 0;
-		
-		for (int t = 0; t < checkThis.length(); t++)
-		{
-			char c = checkThis.charAt(t);
-			switch (c)
-			{
-				case '(':
-					brackA++;
-				break;
-				case ')':
-					brackA--;
-				break;
-				case '{':
-					brackB++;
-				break;
-				case '}':
-					brackB--;
-				break;
-				case '[':
-					brackC++;
-				break;
-				case ']':
-					brackC--;
-				break;
-				case '<':
-					brackD++;
-				break;
-				case '>':
-					brackD--;
-				break;
-			}
-		}
-		
-		return (brackA == 0 && brackB == 0 && brackC == 0 && brackD == 0);
-	}
-	
 	public static int[] mergeSort(int[] array)
 	{
 		int[] arr = intoNewArray(array);
