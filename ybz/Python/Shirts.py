@@ -14,11 +14,13 @@ def eventsInput(numEvents):
         events.append(int(input()))
     return events
 
-def isIn(num, array):
+def sort(array):
     for n in range(len(array)):
-        if (num == array[n]):
-            return True
-    return False
+        for i in range(len(array)-1-n):
+            if (array[i] > array[i+1]):
+                temp = array[i+1]
+                array[i+1] = array[i]
+                array[i] = temp
 
 def sort(array):
     for n in range(len(array)):

@@ -24,7 +24,7 @@ def getOpposingAlpacas(alpacaNum):
 
 def sort(array):
     for n in range(len(array)):
-        for i in range(n, len(array)-1):
+        for i in range(len(array)-1-n):
             if (array[i] > array[i+1]):
                 temp = array[i+1]
                 array[i+1] = array[i]

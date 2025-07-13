@@ -6,17 +6,18 @@ astring = '''
 hello
     we
         are
-            ironman?
+            what?
 '''
 anint = 1
-afloat = 1.02
-achar = 'c'
-abool = True #or False
-print(type(afloat))
+afloat = 1.02 # memory equivalent to Double in Java
+achar = 'c' # no car, just string
+abool = True #or False (capitalized first letter)
+print(type(achar))
 
 print (4//3) #int division
 print (2**3) #exponent
 #no ++ / --
+# += / -= works
 
 print (5%2)
 
@@ -28,6 +29,8 @@ print(string1.center(20))
 print(f"{string1} and hello {anint}")
 print (string1*9)
 
+# charAt equivalent: (it's like an array)
+print(string1[0])
 i = 0
 while (i < 5):
     i+=1
@@ -65,7 +68,8 @@ lst[2] = 4
 print(lst)
 
 # TUPLES
-
+# tuples cannot be modified directly
+# if a tuple element is in itself modifiable, it can then be modified within the tuple: for example: lists (you can modify the content of the list but not the list's position in the tuple)
 tup = (2,3)
 
 print(tup)
@@ -78,11 +82,12 @@ tup2[0][1] = 1
 print(tup2)
 
 # DICTIONARIES
-
-d = {'sand': 123}
+# left: key, right: value
+d = {'sand': 123, 'dog': 0}
 d['wood'] = 5
 print(d)
-
+# check if key is in library
+print('sand' in d)
 y = {}
 years = [2002,2003,2004]
 months = ['jan', 'feb', 'mar']
@@ -113,7 +118,7 @@ s.add(109)
 print(s)
 
 # USER INPUT
-
+# user input defaults to string, you need to cast to other types
 x = input()
 print(type(x))
 x = int(x)
